@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="cobra">
+  <link
+    name="dummy_link"/>
+  <joint
+    name="dummy_joint"
+    type="fixed">
+  <parent
+    link="dummy_link"/>
+  <child
+    link="tail module"/>
+  </joint>
+  <link
+    name="tail module">
+    <inertial>
+      <origin
+        xyz="0.029782 0.092728 0.13165"
+        rpy="0 0 0" />
+      <mass
+        value="0.41473" />
+      <inertia
+        ixx="0.00022915"
+        ixy="-3.2995E-11"
+        ixz="7.8425E-07"
+        iyy="0.00037953"
+        iyz="-3.9314E-11"
+        izz="0.00040608" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/tail module.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/tail module.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="L1">
+    <inertial>
+      <origin
+        xyz="0.062787 0.04315 -0.00085307"
+        rpy="0 0 0" />
+      <mass
+        value="0.1932" />
+      <inertia
+        ixx="7.8406E-05"
+        ixy="3.2995E-11"
+        ixz="-7.8425E-07"
+        iyy="0.00018304"
+        iyz="5.1735E-12"
+        izz="0.00020219" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/L1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/L1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J1"
+    type="revolute">
+    <origin
+      xyz="0.12635 -0.08835 0.092728"
+      rpy="-3.1416 0 0" />
+    <parent
+      link="tail module" />
+    <child
+      link="L1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10.0"
+      velocity="10.0" />
+  </joint>
+  <link
+    name="L2">
+    <inertial>
+      <origin
+        xyz="0.062787 0.00025 -0.00085307"
+        rpy="0 0 0" />
+      <mass
+        value="0.1932" />
+      <inertia
+        ixx="7.8406E-05"
+        ixy="3.0628E-11"
+        ixz="-7.8427E-07"
+        iyy="0.00018304"
+        iyz="1.0369E-11"
+        izz="0.00020219" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/L2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/L2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J2"
+    type="revolute">
+    <origin
+      xyz="0.126 0.04315 0"
+      rpy="-1.5708 0 -0.091004" />
+    <parent
+      link="L1" />
+    <child
+      link="L2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10.0"
+      velocity="10.0" />
+  </joint>
+  <link
+    name="L3">
+    <inertial>
+      <origin
+        xyz="0.062787 0.00025 -0.00085305"
+        rpy="0 0 0" />
+      <mass
+        value="0.1932" />
+      <inertia
+        ixx="7.8406E-05"
+        ixy="5.729E-11"
+        ixz="-7.842E-07"
+        iyy="0.00018304"
+        iyz="-2.5509E-12"
+        izz="0.00020219" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/L3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/L3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J3"
+    type="revolute">
+    <origin
+      xyz="0.126 0.00025 0"
+      rpy="1.5708 0 -0.32359" />
+    <parent
+      link="L2" />
+    <child
+      link="L3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10.0"
+      velocity="10.0" />
+  </joint>
+  <link
+    name="L4">
+    <inertial>
+      <origin
+        xyz="0.062787 0.00025001 -0.00085308"
+        rpy="0 0 0" />
+      <mass
+        value="0.1932" />
+      <inertia
+        ixx="7.8406E-05"
+        ixy="3.7897E-11"
+        ixz="-7.8428E-07"
+        iyy="0.00018304"
+        iyz="4.1666E-12"
+        izz="0.00020219" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/L4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/L4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J4"
+    type="revolute">
+    <origin
+      xyz="0.126 0.00025 0"
+      rpy="-1.5708 0 -0.11916" />
+    <parent
+      link="L3" />
+    <child
+      link="L4" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10.0"
+      velocity="10.0" />
+  </joint>
+  <link
+    name="L5">
+    <inertial>
+      <origin
+        xyz="0.062787 0.00025001 -0.00085308"
+        rpy="0 0 0" />
+      <mass
+        value="0.1932" />
+      <inertia
+        ixx="7.8406E-05"
+        ixy="3.8745E-11"
+        ixz="-7.8428E-07"
+        iyy="0.00018304"
+        iyz="1.6026E-11"
+        izz="0.00020219" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/L5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/L5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J5"
+    type="revolute">
+    <origin
+      xyz="0.126 0.00025 0"
+      rpy="1.5708 0 0.44482" />
+    <parent
+      link="L4" />
+    <child
+      link="L5" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10.0"
+      velocity="10.0" />
+  </joint>
+  <link
+    name="L6">
+    <inertial>
+      <origin
+        xyz="0.062787 0.00025 -0.00085307"
+        rpy="0 0 0" />
+      <mass
+        value="0.1932" />
+      <inertia
+        ixx="7.8406E-05"
+        ixy="2.4209E-11"
+        ixz="-7.8424E-07"
+        iyy="0.00018304"
+        iyz="1.5239E-11"
+        izz="0.00020219" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/L6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/L6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J6"
+    type="revolute">
+    <origin
+      xyz="0.126 0.00025 0"
+      rpy="-1.5708 0 0.20169" />
+    <parent
+      link="L5" />
+    <child
+      link="L6" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10.0"
+      velocity="10.0" />
+  </joint>
+  <link
+    name="L7">
+    <inertial>
+      <origin
+        xyz="0.062787 0.00025 -0.00085307"
+        rpy="0 0 0" />
+      <mass
+        value="0.1932" />
+      <inertia
+        ixx="7.8406E-05"
+        ixy="2.9036E-11"
+        ixz="-7.8425E-07"
+        iyy="0.00018304"
+        iyz="1.1388E-11"
+        izz="0.00020219" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/L7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/L7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J7"
+    type="revolute">
+    <origin
+      xyz="0.126 0.00025 0"
+      rpy="-1.5708 0 -0.10986" />
+    <parent
+      link="L6" />
+    <child
+      link="L7" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10.0"
+      velocity="10.0" />
+  </joint>
+  <link
+    name="L8">
+    <inertial>
+      <origin
+        xyz="0.062787 0.00025 -0.00085307"
+        rpy="0 0 0" />
+      <mass
+        value="0.1932" />
+      <inertia
+        ixx="7.8406E-05"
+        ixy="3.229E-11"
+        ixz="-7.8425E-07"
+        iyy="0.00018304"
+        iyz="9.6328E-12"
+        izz="0.00020219" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/L8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/L8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J8"
+    type="revolute">
+    <origin
+      xyz="0.126 0.00025 0"
+      rpy="1.5708 0 -0.0033943" />
+    <parent
+      link="L7" />
+    <child
+      link="L8" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10.0"
+      velocity="10.0" />
+  </joint>
+  <link
+    name="L9">
+    <inertial>
+      <origin
+        xyz="0.062787 0.00025 -0.00085307"
+        rpy="0 0 0" />
+      <mass
+        value="0.1932" />
+      <inertia
+        ixx="7.8406E-05"
+        ixy="3.2517E-11"
+        ixz="-7.8425E-07"
+        iyy="0.00018304"
+        iyz="9.6413E-12"
+        izz="0.00020219" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/L9.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/L9.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J9"
+    type="revolute">
+    <origin
+      xyz="0.126 0.00025 0"
+      rpy="-1.5708 0 -0.003191" />
+    <parent
+      link="L8" />
+    <child
+      link="L9" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10.0"
+      velocity="10.0" />
+  </joint>
+  <link
+    name="L10">
+    <inertial>
+      <origin
+        xyz="0.062787 0.00025001 -0.00085289"
+        rpy="0 0 0" />
+      <mass
+        value="0.1932" />
+      <inertia
+        ixx="7.8406E-05"
+        ixy="1.3511E-11"
+        ixz="-7.8461E-07"
+        iyy="0.00018304"
+        iyz="9.5051E-12"
+        izz="0.00020219" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/L10.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/L10.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J10"
+    type="revolute">
+    <origin
+      xyz="0.126 0.00025 0"
+      rpy="1.5708 0 -9.5563E-05" />
+    <parent
+      link="L9" />
+    <child
+      link="L10" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10.0"
+      velocity="10.0" />
+  </joint>
+  <link
+    name="Head Module">
+    <inertial>
+      <origin
+        xyz="-0.060864 3.3341E-05 -2.3516E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.24807" />
+      <inertia
+        ixx="0.00014096"
+        ixy="-3.0491E-07"
+        ixz="6.1702E-07"
+        iyy="9.8921E-05"
+        iyz="-1.6787E-06"
+        izz="0.00010326" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/Head Module.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cobra-sim-gazebo/meshes/Head Module.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J11"
+    type="revolute">
+    <origin
+      xyz="0.126 0.00025002 0"
+      rpy="-0.43761 0 -2.8834" />
+    <parent
+      link="L10" />
+    <child
+      link="Head Module" />
+    <axis
+      xyz="0 0.42378 -0.90577" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10.0"
+      velocity="10.0" />
+  </joint>
+
+  <!--                GAZEBO RELATED PART                             -->
+
+  <!-- ROS Control plugin for Gazebo -->
+
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+    <robotNamespace>/cobra</robotNamespace>
+    </plugin>
+  </gazebo>
+
+  <!-- transmission -->
+  <transmission name="tail_to_l1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="J1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor1">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="l1_to_l2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="J2">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor2">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="l2_to_l3_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="J3">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor3">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="l3_to_l4_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="J4">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor4">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="l4_to_l5_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="J5">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor5">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    </transmission>
+
+    <transmission name="l5_to_l6_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="J6">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor6">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    </transmission>
+
+    <transmission name="l6_to_l7_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="J7">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor7">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    </transmission>
+
+    <transmission name="l7_to_l8_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="J8">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor8">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    </transmission>
+
+    <transmission name="l8_to_l9_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="J9">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor9">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    </transmission>
+
+    <transmission name="l9_to_l10_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="J10">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor10">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    </transmission>
+
+    <transmission name="l10_to_head_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="J11">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor11">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    </transmission>
+
+</robot>

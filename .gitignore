@@ -53,3 +53,6 @@ CATKIN_IGNORE
 
 # Turtlebot3 files
 /src/turtlebot3*
+
+# COBRA main repository
+src/COBRA
