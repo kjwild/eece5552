@@ -56,3 +56,6 @@ CATKIN_IGNORE
 
 # COBRA main repository
 src/COBRA
+
+# GMapping files
+src/*gmapping*
