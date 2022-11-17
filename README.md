@@ -43,11 +43,33 @@ This repository is public and does not require a key to clone.
 Remember to source the set-up file for each new instance.
 
 <!-- USAGE -->
-[//]: # (later)
+## Usage
+
+Here are instructions for running important packages in this project.
+
+### burger_example
+
+The burger_example package is an attempt at running and understand Gazebo.  It uses Turtlebot3.
+
+#### burger_example Required Packages
+
+To run with Turtlebot3 Burger, the primary model for this package, the following additional packages are needed:
+
+- turtlebot3
+- turtlebot3_msgs
+- turtlebot3_simulations
+- slam_gmapping
+- openslam_gmapping
+
+The SLAM packages assist with a mapping demonstration of a sample world.
+
+### camera_reader
+
+TBD
 
 <!-- ROADMAP -->
 ## Roadmap
-- [ ] Mid-term proposal
+- [X] Mid-term proposal
 - [ ] Camera hardware integration
 - [ ] Robot locomotion
 - [ ] Point cloud sampling

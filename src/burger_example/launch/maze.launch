@@ -1,0 +1,42 @@
+<launch>
+
+	<arg name="model" default="burger" doc="model type [burger, waffle, waffle_pi]"/>
+	<env name="TURTLEBOT3_MODEL" value="$(arg model)" />
+	<arg name="first_name"  default="my_name"/>
+
+	<arg name="slam_methods" default="gmapping" doc="slam type [gmapping, cartographer, hector, karto, frontier_exploration]"/>
+	<arg name="configuration_basename" default="turtlebot3_lds_2d.lua"/>
+	
+	<arg name="my_x_pos" default="-0.3"/>
+	<arg name="my_y_pos" default="-3.0"/>
+	<arg name="my_z_pos" default="0.0"/>
+	<arg name="my_yaw"   default="1.57"/>
+	
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+		<arg name="world_name" value="$(find burger_example)/world/maze.world"/>
+		<arg name="paused" value="false"/>
+		<arg name="use_sim_time" value="true"/>
+		<arg name="gui" value="true"/>
+		<arg name="headless" value="false"/>
+		<arg name="debug" value="false"/>
+	</include>
+	
+	<include file="$(find turtlebot3_slam)/launch/turtlebot3_$(arg slam_methods).launch">
+		<arg name="model" value="$(arg model)"/>
+		<arg name="configuration_basename" value="$(arg configuration_basename)"/>
+	</include>
+	
+	<node pkg="rviz" type="rviz" name="rviz" required="true" args="-d $(find burger_example)/rviz/my_gmapping.rviz"/>
+	
+	<param name="robot_description" command="$(find xacro)/xacro --inorder $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro" />
+	<rosparam file="$(find burger_example)/config/LDS-01.yaml" param="laser_params"/>
+	
+	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
+		<param name="publish_frequency" type="double" value="50.0" />
+	</node>
+	
+	<node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model turtlebot3_$(arg model) -x $(arg my_x_pos) -y $(arg my_y_pos) -z $(arg my_z_pos) -Y $(arg my_yaw) -param robot_description" />
+	<node pkg="burger_example" name="my_mapper" type="mapping.py" output="screen" />
+	<node pkg="burger_example" name="my_collision" type="collision.py" output="screen" />
+
+</launch>
